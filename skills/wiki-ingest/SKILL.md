@@ -3,6 +3,11 @@ name: wiki-ingest
 description: Compile one raw source into the wiki. Reads a file under raw/, plans which pages to create or update, writes them with verbatim footnote citations, records contradictions as disputes, rebuilds indexes, verifies, logs and commits. Use when the user says "ingest", "compile", "process raw", "add this source to the wiki", or drops a file into raw/.
 argument-hint: "[raw/path.md | --pending | --yes]"
 allowed-tools: Bash(python:*) Bash(git:*) Read Write Edit Glob Grep
+metadata:
+  version: "0.1.0"
+  hermes:
+    tags: [wiki, knowledge-base, obsidian]
+    category: knowledge
 ---
 
 # wiki-ingest

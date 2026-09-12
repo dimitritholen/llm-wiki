@@ -3,6 +3,11 @@ name: wiki-lint
 description: Health check for the wiki. Runs the mechanical linter (links, citations, frontmatter, staleness, orphans, index drift, changed raw files), fixes what a script can prove, reports what needs a human, and optionally runs a semantic audit by a different model. Use for "lint the wiki", "health check", "is the wiki consistent", or on a monthly cadence.
 argument-hint: "[--semantic] [--strict]"
 allowed-tools: Bash(python:*) Bash(git:*) Read Write Edit Glob Grep Agent
+metadata:
+  version: "0.1.0"
+  hermes:
+    tags: [wiki, knowledge-base, obsidian]
+    category: knowledge
 ---
 
 # wiki-lint

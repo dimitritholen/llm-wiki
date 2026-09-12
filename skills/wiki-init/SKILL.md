@@ -4,6 +4,11 @@ description: Scaffold a new LLM wiki vault (raw/, wiki/, schema, scripts, templa
 argument-hint: "[target directory]"
 disable-model-invocation: true
 allowed-tools: Bash(python:*) Bash(git:*) Read Glob
+metadata:
+  version: "0.1.0"
+  hermes:
+    tags: [wiki, knowledge-base, obsidian]
+    category: knowledge
 ---
 
 # wiki-init

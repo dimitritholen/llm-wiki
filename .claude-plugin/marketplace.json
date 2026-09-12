@@ -1,0 +1,14 @@
+{
+  "name": "llm-wiki",
+  "owner": {
+    "name": "Dimitri Tholen"
+  },
+  "description": "LLM-maintained markdown wiki plugin: Karpathy's LLM Wiki pattern with enforced citations, an immutable raw/ layer, recorded disputes and a mechanical linter.",
+  "plugins": [
+    {
+      "name": "llm-wiki",
+      "source": "./",
+      "description": "LLM-maintained markdown wiki with enforced citations, an immutable raw/ layer, recorded disputes and a mechanical linter."
+    }
+  ]
+}

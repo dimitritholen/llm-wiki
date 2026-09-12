@@ -11,10 +11,11 @@ the layout and the invariants. The short version:
 - Finish every operation with `python .wiki/scripts/lint.py`, a log line, and
   a git commit if this is a repository.
 
-The workflows live in `.wiki/skills/`:
+The workflows are skills in `.agents/skills/`. Codex loads them as
+`$wiki-ingest`, `$wiki-query` and `$wiki-lint`; Hermes as `/wiki-ingest` and
+so on. If your agent does not discover that directory, read the relevant file
+in full before starting the operation:
 
-- `.wiki/skills/wiki-ingest/SKILL.md` to compile a raw source
-- `.wiki/skills/wiki-query/SKILL.md` to answer a question from the wiki
-- `.wiki/skills/wiki-lint/SKILL.md` to run the health check
-
-Read the relevant SKILL.md in full before starting that operation.
+- `.agents/skills/wiki-ingest/SKILL.md` to compile a raw source
+- `.agents/skills/wiki-query/SKILL.md` to answer a question from the wiki
+- `.agents/skills/wiki-lint/SKILL.md` to run the health check

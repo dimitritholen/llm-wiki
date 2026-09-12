@@ -5,7 +5,7 @@ Creates:
     raw/  wiki/{sources,entities,concepts,analyses}/  output/
     wiki/overview.md  wiki/log.md  and the generated indexes
     .wiki/scripts/    a copy of these scripts, so any agent can run them
-    .wiki/skills/     a copy of the SKILL.md workflows, for agents without plugins
+    .agents/skills/   a copy of the SKILL.md workflows; Codex and others find them here
     .wiki/templates/  page templates
 
 Existing files are left alone unless --force is given. Run it from the
@@ -80,8 +80,12 @@ def main(argv: list[str] | None = None) -> int:
         copy_file(script, state_dir / "scripts" / script.name, True, created)
     for tpl in sorted((t / "pages").glob("*.md")):
         copy_file(tpl, state_dir / "templates" / tpl.name, True, created)
+    # .agents/skills/ is the project-level skills directory that Codex, Gemini
+    # CLI, Copilot, Cline and others discover on their own. Hermes can be
+    # pointed at it with HERMES_OPTIONAL_SKILLS_DIR. Claude Code users get the
+    # same skills from the plugin, which also carries the raw/ guard hook.
     for skill_md in sorted((root / "skills").glob("*/SKILL.md")):
-        copy_file(skill_md, state_dir / "skills" / skill_md.parent.name / "SKILL.md", True, created)
+        copy_file(skill_md, vault / ".agents" / "skills" / skill_md.parent.name / "SKILL.md", True, created)
 
     # Generated files and the first log line.
     subprocess.run([sys.executable, str(state_dir / "scripts" / "build_index.py")], cwd=vault, check=True)

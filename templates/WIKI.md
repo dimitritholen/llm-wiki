@@ -18,9 +18,11 @@ wiki/
   concepts/     ideas, methods, theories, terms (kind: concept)
   analyses/     comparisons and syntheses across sources (kind: analysis)
 output/         answers to queries, optionally filed back into wiki/
+.agents/skills/ the wiki-ingest, wiki-query, wiki-lint, wiki-init workflows
 .wiki/
   state.json    ingest state per raw file (hash, date, pages touched)
   scripts/      lint, cite, build_index, status, search, log, mark_compiled
+  templates/    page templates
 wiki.json       configuration for the scripts
 ```
 

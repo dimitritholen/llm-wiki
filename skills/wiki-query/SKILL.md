@@ -3,6 +3,11 @@ name: wiki-query
 description: Answer a question from the wiki, with citations to wiki pages and their raw anchors, and file the answer back so it compounds. Use when the user asks a question about the material in the vault, says "ask the wiki", "what do my sources say about", or "query".
 argument-hint: "[question] [--file]"
 allowed-tools: Bash(python:*) Bash(git:*) Read Write Glob Grep
+metadata:
+  version: "0.1.0"
+  hermes:
+    tags: [wiki, knowledge-base, obsidian]
+    category: knowledge
 ---
 
 # wiki-query
