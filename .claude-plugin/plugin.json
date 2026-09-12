@@ -1,0 +1,12 @@
+{
+  "name": "llm-wiki",
+  "displayName": "LLM Wiki",
+  "description": "An LLM-maintained markdown wiki with enforced citations, an immutable raw/ layer, recorded disputes, freshness tracking and a mechanical linter. Karpathy's LLM Wiki pattern with the failure modes closed.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Dimitri Tholen"
+  },
+  "license": "MIT",
+  "keywords": ["wiki", "knowledge-base", "obsidian", "second-brain", "markdown"],
+  "hooks": "./hooks/hooks.json"
+}

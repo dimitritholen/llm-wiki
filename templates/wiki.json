@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "raw_dir": "raw",
+  "wiki_dir": "wiki",
+  "output_dir": "output",
+  "state_dir": ".wiki",
+  "stale_days": 90,
+  "page_dirs": {
+    "sources": "source",
+    "entities": "entity",
+    "concepts": "concept",
+    "analyses": "analysis"
+  },
+  "special_pages": ["index.md", "log.md", "overview.md", "disputes.md"],
+  "required_frontmatter": ["title", "kind", "summary", "created", "last_verified"],
+  "human_section": "My take",
+  "dispute_section": "Disputed"
+}
