@@ -54,9 +54,6 @@ PreToolUse hook that makes `raw/` read only. Two ways to load it.
 /plugin install llm-wiki@llm-wiki
 ```
 
-The repo is private, so this needs a git credential that can read it (the
-`gh auth login` credential helper is enough).
-
 **From a local clone**, for development or when you prefer not to install:
 
 ```
